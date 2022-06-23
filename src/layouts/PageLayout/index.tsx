@@ -1,21 +1,22 @@
-import React, { FC } from 'react';
+import React, { Children, FC } from 'react';
+import MainPage from '../../entities/MainPage';
 import Footer from '../../shared/Footer';
 import Header from '../../shared/Header';
-import Sidebar from '../../shared/Sidebar';
-import style from './PageLayout.module.scss';
+import style from './pagelayout.module.scss';
 
 interface IPageLayout {
   children: React.ReactNode;
 }
 
-const PageLayout: FC<IPageLayout> = ({ children }) => {
+const PageLayout: FC<IPageLayout> = () => {
   return (
     <div className={style.page_wrapper}>
-      <div className={style.section_wrapper}>
-        <Header />
-        <div className={style.innerPage_wrapper}>
-          <Sidebar />
-          <div className={style.content_wrapper}>{children}</div>
+      <div className={style.content_wrapper}>
+        <div className={style.header_container}>
+          <Header />
+        </div>
+        <div className={style.children_wrapper}>
+          <MainPage />
         </div>
         <Footer />
       </div>

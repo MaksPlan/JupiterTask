@@ -1,27 +1,15 @@
 .page_wrapper {
-  display: flex;
-  // height: 100vh;
-  flex: 0 0 auto;
-  background-color: #E5E5E5;
+    display: flex;
+    // flex-wrap: wrap;
+    height: 100vh;
 }
-
-.section_wrapper {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  margin: 0 auto;
-  background-color: #E5E5E5;
+.header_container {
+    background-color: #28293e;
+    width: 100%;
+    padding-top: 16px;
+    margin: 0 auto;
 }
-
 .content_wrapper {
-  padding: 10px;
-  // height: 100vh;
-  background-color: #E5E5E5;
-}
-
-.innerPage_wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
+    max-width: 1440px;
+    margin: 0 auto;
 }

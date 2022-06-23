@@ -1,21 +1,38 @@
 import React from 'react';
-import ImgSelector from '../../img/ImgSelector';
-import style from './Header.module.scss';
+import style from './header.module.scss';
 
 const Header = () => {
   return (
-    <div className={style.main_header}>
-      <div className={style.page_header}>
-        <div className={style.container}>
-          <ImgSelector id="logo" />
-          <h1 className={style.page_header_h1}>СТИКЕР</h1>
+    <header>
+      <div className={style.header_container}>
+        <div className={style.logo}>
+          <img src="img/logo.svg" alt="logo" />
+          <h1 className={style.title}>Agency</h1>
         </div>
-        <div className={style.container}>
-          <ImgSelector id="profil_logo" />
-          <h2 className={style.page_header_h2}>Профиль</h2>
+        <div className={style.nav}>
+          <ul>
+            <li>About</li>
+            <li> Services</li>
+            <li>Pricing</li>
+            <li> Blog</li>
+          </ul>
+        </div>
+        <div className={style.contact}>
+          <h2>CONTACT</h2>
         </div>
       </div>
-    </div>
+      <div className={style.portfolio}>
+        <div>
+          <h3>Portfolio</h3>
+        </div>
+        <div>
+          <p>
+            Agency provides a full service range including technical skills, design, business
+            understanding.
+          </p>
+        </div>
+      </div>
+    </header>
   );
 };
 

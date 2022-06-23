@@ -1,35 +1,88 @@
-.main_header{
-  margin: 0 auto;
-  align-items: center;
-  width: 100%;
-  background-color: #FFFFFF;
+.title {
+    font-family: 'Epilogue-bold';
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    padding-left: 15px;
+    margin: auto 0;
 }
-.page_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 60px;
-  max-width: 1100px;
-  margin: 0 auto;
+.header_container  {
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    // height: 400px;
+    background-color: #28293e;
+    padding-left: 136px;
+    // justify-content: space-between;
+    margin: 0 auto;
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  
-}
-.page_header_h1 {
-  font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 16px;
-}
+.logo {
+    display: flex;
+    flex-direction: row;
+    width: 138.83px;
+height: 43.42px;
 
-.page_header_h2 {
-  font-family: 'Jost';
-font-style: normal;
-font-weight: 400;
+}
+ul {
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+li {
+color: #fff;
+font-family: Epilogue-Regular;
+font-weight: normal;
+font-size: 16px;
+line-height: 32px;
+text-align: center;
+}
+.nav {
+padding-left: 185px;
+height: 16px;
+// padding-top: 16px;
+}
+.contact {
+width: 138px;
+height: 48px;
+padding-left: 186px;
+padding-top: 16px;
+    h2 {
+font-family: Epilogue-Black;
+font-weight: normal;
 font-size: 14px;
-line-height: 24px;
+text-align: center;
+color: #fff;
+}
+}
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: 58px;
+    div {
+        margin: 0 auto;
+        h3 {
+            font-family: 'Epilogue-ExtraBold';
+            font-weight: normal;
+            font-size: 72px;
+            letter-spacing: -0.03em;
+            line-height: 80px;
+            text-align: center;
+            color: #fff;
+        }
+        p {
+        width: 570px;
+        height: 66px;
+        font-family: 'Epilogue-Regular';
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.64);
+        }
+    }
 }
