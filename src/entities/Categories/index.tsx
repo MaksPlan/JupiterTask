@@ -9,17 +9,19 @@ const Categories: FC = () => {
     'Illustration',
     'Motion',
   ];
+ const handlerChooseCat = () => {
+  
+ }
 
   return (
     <div className={style.container}>
       <ul>
         {categoriesArray.map((category: string) => {
           return (
-            <li>
-              <button type="button" className={style.list_item}>
+            <li key={`${category}i`}>
+              <button type="button" className={style.list_item} onClick={() => handlerChooseCat()}>
                 {category}
               </button>
-              ;
             </li>
           );
         })}

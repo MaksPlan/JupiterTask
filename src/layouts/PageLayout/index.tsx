@@ -18,7 +18,9 @@ const PageLayout: FC<IPageLayout> = () => {
         <div className={style.children_wrapper}>
           <MainPage />
         </div>
-        <Footer />
+        <div className={style.footer}>
+          <Footer />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,55 @@
+.figure {
+width: 370px;
+height: 416px;
+background: transparent;
+position: relative;
+display: flex;
+}
+.figcaption {
+    z-index: 5;
+    position: relative;
+    margin: 256px 0 0 60px;
+    display: flex;
+    flex-direction: column;
+}
+ .button {
+        // z-index: 5;
+        // position: relative;
+        width: 102px;
+        height: 38px;
+        border: none;
+        border-radius: 19px;
+        background: #fff;
+        font-family: 'Epilogue-Regular';
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
+        color: #391400;
+    }
+.title {
+    z-index: 5;
+    position: relative;
+    font-family: Epilogue-ExtraBold;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+text-align: left;
+color: #fff;
+margin-bottom: 53px;
+margin-top: 16px;
+
+}
+
+.container_grid {
+    padding-top: 75px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 370px 370px 370px;
+    gap: 30px;
+    justify-content: center;
+}
+.img {
+    position: absolute;
+    // z-index: -1;
+}

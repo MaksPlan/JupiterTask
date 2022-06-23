@@ -1,7 +1,7 @@
 .page_wrapper {
     display: flex;
     // flex-wrap: wrap;
-    height: 100vh;
+    height: 100%;
 }
 .header_container {
     background-color: #28293e;
@@ -12,4 +12,8 @@
 .content_wrapper {
     max-width: 1440px;
     margin: 0 auto;
+}
+.footer {
+margin-top: -1px;
+justify-items: baseline;
 }

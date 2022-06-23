@@ -1,25 +1,43 @@
 import React, { FC, useState } from 'react';
 import { IImgHolder } from '../../interfaces/IImgHolder';
+import style from './cards.module.scss';
 
-// interface IProps {
-//   id: number;
-//   name: string;
-//   category: string;
-//   path: string;
-// }
+interface IProps {
+  arr: IImgHolder[];
+}
 
-const Cards = (arr: IImgHolder[]) => {
+const Cards: FC<IProps> = ({ arr }) => {
   const [arrImg, setArrImg] = useState(arr);
+
+  function handlerSetCategory(i: string) {
+    let newArray: IImgHolder[] = [];
+
+    newArray = arrImg.filter((obj) => obj.category === i);
+
+    setArrImg(newArray);
+  }
+
   return (
-    <>
-      {arrImg.forEach((img: IImgHolder) => {
-        <div key={`${img.id}+${img.name}`}>
-          <img src={img.path} alt={img.name} />
-          <button type="button">{img.category}</button>
-          <h3>{img.name}</h3>
-        </div>;
+    <div className={style.container_grid}>
+      {arrImg.map((img: IImgHolder) => {
+        return (
+          <div key={`${img.id}+${img.name}`} className={style.figure}>
+            <figure>
+              <img src={img.path} alt={img.name} className={style.img} />
+              <figcaption className={style.figcaption}>
+                <button
+                  type="button"
+                  className={style.button}
+                  onClick={() => handlerSetCategory(`${img.category}`)}>
+                  {img.category}
+                </button>
+                <h3 className={style.title}>{img.name}</h3>
+              </figcaption>
+            </figure>
+          </div>
+        );
       })}
-    </>
+    </div>
   );
 };
 

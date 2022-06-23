@@ -12,10 +12,10 @@
     display: flex;
     flex-direction: row;
     width: 1440px;
-    // height: 400px;
+
     background-color: #28293e;
-    padding-left: 136px;
-    // justify-content: space-between;
+    // padding: 0 136px;
+    justify-content: space-around;
     margin: 0 auto;
 }
 .logo {
