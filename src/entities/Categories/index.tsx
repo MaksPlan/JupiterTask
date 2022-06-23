@@ -1,7 +1,10 @@
 import React, { FC } from 'react';
 import style from './categories.module.scss';
 
-const Categories: FC = () => {
+interface IProps {
+  onChange: (cat: string) => string;
+}
+const Categories = ({ onChange }: IProps) => {
   const categoriesArray: Array<string> = [
     'Show All',
     'Design',
@@ -9,9 +12,9 @@ const Categories: FC = () => {
     'Illustration',
     'Motion',
   ];
- const handlerChooseCat = () => {
-  
- }
+  const handlerChooseCat = (cat: string) => {
+    onChange(cat);
+  };
 
   return (
     <div className={style.container}>
@@ -19,7 +22,10 @@ const Categories: FC = () => {
         {categoriesArray.map((category: string) => {
           return (
             <li key={`${category}i`}>
-              <button type="button" className={style.list_item} onClick={() => handlerChooseCat()}>
+              <button
+                type="button"
+                className={style.list_item}
+                onClick={() => handlerChooseCat(`${category}`)}>
                 {category}
               </button>
             </li>

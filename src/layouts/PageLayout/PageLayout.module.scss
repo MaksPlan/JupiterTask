@@ -1,19 +1,21 @@
 .page_wrapper {
     display: flex;
-    // flex-wrap: wrap;
-    height: 100%;
+    flex-wrap: wrap;
+    background: #fdf0e9;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 .header_container {
     background-color: #28293e;
-    width: 100%;
     padding-top: 16px;
     margin: 0 auto;
 }
 .content_wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    background: #fdf0e9;
 }
 .footer {
-margin-top: -1px;
-justify-items: baseline;
+    justify-items: baseline;
+    margin: 0 auto;
 }
