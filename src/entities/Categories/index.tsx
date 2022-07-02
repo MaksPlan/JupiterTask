@@ -1,10 +1,12 @@
 import React, { FC } from 'react';
+import { useDispatch } from 'react-redux';
 import style from './categories.module.scss';
 
 interface IProps {
   onChange: (cat: string) => string;
 }
-const Categories = ({ onChange }: IProps) => {
+const Categories = () => {
+  const dispatch = useDispatch();
   const categoriesArray: Array<string> = [
     'Show All',
     'Design',
@@ -12,9 +14,10 @@ const Categories = ({ onChange }: IProps) => {
     'Illustration',
     'Motion',
   ];
-  const handlerChooseCat = (cat: string) => {
-    onChange(cat);
-  };
+
+  function changeCategory(name: string) {
+    dispatch(type: name)
+  }
 
   return (
     <div className={style.container}>
@@ -25,7 +28,7 @@ const Categories = ({ onChange }: IProps) => {
               <button
                 type="button"
                 className={style.list_item}
-                onClick={() => handlerChooseCat(`${category}`)}>
+                onClick={() => changeCategory(`${category}`)}>
                 {category}
               </button>
             </li>
