@@ -1,25 +1,19 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
+import { useDispatch } from 'react-redux';
 import { IImgHolder } from '../../interfaces/IImgHolder';
 import style from './cards.module.scss';
 
 interface IProps {
-  arr: IImgHolder[];
+  arr: { cards: IImgHolder[] };
 }
 
 const Cards: FC<IProps> = ({ arr }) => {
-  const [arrImg, setArrImg] = useState(arr);
-
-  function handlerSetCategory(i: string) {
-    let newArray: IImgHolder[] = [];
-
-    newArray = arrImg.filter((obj) => obj.category === i);
-
-    setArrImg(newArray);
-  }
-
+  const { cards } = arr;
+  const dispatch = useDispatch();
+  console.log('  const { cards } = arr;', cards);
   return (
     <div className={style.container_grid}>
-      {arrImg.map((img: IImgHolder) => {
+      {cards.map((img: IImgHolder) => {
         return (
           <div key={`${img.id}+${img.name}`} className={style.figure}>
             <figure>
@@ -28,7 +22,7 @@ const Cards: FC<IProps> = ({ arr }) => {
                 <button
                   type="button"
                   className={style.button}
-                  onClick={() => handlerSetCategory(`${img.category}`)}>
+                  onClick={() => dispatch({ type: `${img.category}` })}>
                   {img.category}
                 </button>
                 <h3 className={style.title}>{img.name}</h3>

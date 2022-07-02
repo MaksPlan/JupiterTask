@@ -16,7 +16,7 @@ const Categories = () => {
   ];
 
   function changeCategory(name: string) {
-    dispatch(type: name)
+    dispatch({ type: name });
   }
 
   return (

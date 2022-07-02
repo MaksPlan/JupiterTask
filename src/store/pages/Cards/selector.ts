@@ -1,3 +1,3 @@
-import { IImgHolder } from '../../../interfaces/IImgHolder';
+import { IState } from './interface';
 
-export const getState = (state: IImgHolder[]) => state;
+export const getState = (state: IState) => state;

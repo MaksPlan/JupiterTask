@@ -1,5 +1,5 @@
 import { IImgHolder } from '../../../interfaces/IImgHolder';
 
-export interface IPageState {
+export interface IState {
   cards: IImgHolder[];
 }

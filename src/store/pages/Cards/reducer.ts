@@ -1,26 +1,25 @@
-import { IImgHolder } from '../../../interfaces/IImgHolder';
-import { IPageState } from './interface';
+import { imgHolder } from '../../../mocks/imgHolder';
 
-const initialState: IPageState = {
-  cards: [],
+const initialState = {
+  cards: imgHolder,
 };
 
-export const cardsReducer = (state: IImgHolder[], action: any) => {
+export const cardsReducer = (state = initialState, action: any) => {
   let cards = [];
   switch (action.type) {
     case 'Design':
-      cards = state.filter((obj) => obj.category === 'Design');
+      cards = state.cards.filter((obj) => obj.category === 'Design');
       return { ...state, cards };
     case 'Branding':
-      cards = state.filter((obj) => obj.category === 'Design');
+      cards = state.cards.filter((obj) => obj.category === 'Branding');
       return { ...state, cards };
     case 'Illustration':
-      cards = state.filter((obj) => obj.category === 'Design');
+      cards = state.cards.filter((obj) => obj.category === 'Illustration');
       return { ...state, cards };
     case 'Motion':
-      cards = state.filter((obj) => obj.category === 'Design');
+      cards = state.cards.filter((obj) => obj.category === 'Motion');
       return { ...state, cards };
     default:
-      return state;
+      return { ...state, cards: imgHolder };
   }
 };
